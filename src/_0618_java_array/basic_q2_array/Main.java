@@ -1,6 +1,4 @@
-package _0617_java_basic.basic_q2_oper;
-
-import javax.swing.*;
+package _0618_java_array.basic_q2_array;
 
 public class Main {
     public static void main(String[] args) {
@@ -9,9 +7,5 @@ public class Main {
         for (int i = 1; i <= 5; i++) {
             System.out.println("i = " + i);
         }
-
-        JFrame f = new JFrame();
-        f.setSize(500, 500);
-        f.setVisible(true);
     }
 }

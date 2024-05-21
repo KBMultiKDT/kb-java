@@ -1,4 +1,4 @@
-package _0617_java_basic.basic_q1_var;
+package _0618_java_array.basic_q1_array;
 
 public class Main {
     public static void main(String[] args) {
