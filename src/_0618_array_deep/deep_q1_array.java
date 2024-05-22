@@ -7,7 +7,6 @@ import java.util.Random;
 
 public class deep_q1_array {
         public static void main(String[] args) {
-            SwingUtilities.invokeLater(() -> {
                 JFrame frame = new JFrame("Random Scores Table");
                 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 frame.setSize(800, 400);
@@ -49,7 +48,6 @@ public class deep_q1_array {
 
                 // 프레임 표시
                 frame.setVisible(true);
-            });
         }
     }
 
