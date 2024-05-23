@@ -1,9 +1,5 @@
-package _0618_array_basic;
+package _0619_array_basic;
 
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.util.Random;
 
 public class basic_q3_test {

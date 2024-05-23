@@ -1,4 +1,4 @@
-package _0618_array_deep;
+package _0619_array_deep;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
