@@ -1,9 +1,5 @@
-package _0619_class_deep;
+package _0620_class_deep;
 
-import javax.swing.*;
-import javax.swing.table.DefaultTableModel;
-import java.awt.*;
-import java.util.Random;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 

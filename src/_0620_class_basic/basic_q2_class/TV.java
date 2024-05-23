@@ -1,4 +1,4 @@
-package _0619_class_basic.basic_q2_class;
+package _0620_class_basic.basic_q2_class;
 
 public class TV {
     public int ch;

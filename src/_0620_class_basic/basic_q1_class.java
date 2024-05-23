@@ -1,14 +1,12 @@
-package _0619_class_basic;
+package _0620_class_basic;
 
 import javax.swing.*;
-import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
-import java.util.Random;
 import java.util.*;
 
 public class basic_q1_class {

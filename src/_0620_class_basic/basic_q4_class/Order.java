@@ -1,4 +1,4 @@
-package _0619_class_basic.basic_q4_class;
+package _0620_class_basic.basic_q4_class;
 
 import java.util.ArrayList;
 import java.util.List;

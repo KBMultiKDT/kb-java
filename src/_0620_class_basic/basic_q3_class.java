@@ -1,4 +1,4 @@
-package _0619_class_basic;
+package _0620_class_basic;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

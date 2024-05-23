@@ -1,4 +1,4 @@
-package _0619_class_basic.basic_q4_class;
+package _0620_class_basic.basic_q4_class;
 
 public class Main {
     public static void main(String[] args) {
