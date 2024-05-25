@@ -3,30 +3,29 @@ package _0620_class_basic.basic_q4_class;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Order {
-    private List<MenuItem> items;
+class Order {
+    List<Item> items = new ArrayList<>();
 
-    public Order() {
-        this.items = new ArrayList<>();
-    }
-
-    public void addItem(MenuItem item) {
+    void addItem(Item item) {
         items.add(item);
     }
 
-    public int getTotalPrice() {
-        int totalPrice = 0;
-        for (MenuItem item : items) {
-            totalPrice += item.getPrice();
+    double getTotal() {
+        double total = 0;
+        for (Item item : items) {
+            total += item.getPrice();
         }
-        return totalPrice;
+        return total;
     }
 
-    public void getItems() {
-        String total = "";
-        for (int i = 0; i < items.size(); i++) {
-            total += items.get(i).getName() + " ";
+    int getItemCount() {
+        return items.size();
+    }
+
+    void displayOrder() {
+        for (Item item : items) {
+            System.out.println(item.getName() + ": $" + item.getPrice());
         }
-        System.out.println(total);
+        System.out.println("Total: $" + getTotal());
     }
 }

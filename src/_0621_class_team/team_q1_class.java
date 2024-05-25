@@ -1,4 +1,4 @@
-package _0620_class_basic;
+package _0621_class_team;
 
 import javax.swing.*;
 import java.awt.*;
@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-public class basic_q1_class {
+public class team_q1_class {
         private static final String ROOT_ID = "root";
         private static final String ROOT_PW = "1234";
 

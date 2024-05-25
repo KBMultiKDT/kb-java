@@ -1,9 +1,9 @@
-package _0620_class_basic;
+package _0620_class_deep;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class basic_q3_class {
+public class deep_q1_class2 {
 
     public static void main(String[] args) {
         String text = "안녕하세요. 제 전화번호는 010-1234-5678이고, 회사 번호는 02-9876-5432 입니다.";

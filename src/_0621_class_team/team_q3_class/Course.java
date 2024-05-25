@@ -1,4 +1,4 @@
-package _0620_class_deep.deep_q2_class;
+package _0621_class_team.team_q3_class;
 
 import java.util.ArrayList;
 import java.util.List;
