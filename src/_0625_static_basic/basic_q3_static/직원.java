@@ -1,4 +1,4 @@
-package _0627_static_basic.basic_q3_static;
+package _0625_static_basic.basic_q3_static;
 
 public class 직원 {
     private String name;

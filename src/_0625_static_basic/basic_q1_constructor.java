@@ -1,4 +1,4 @@
-package _0627_static_basic;
+package _0625_static_basic;
 
 import javax.swing.*;
 import java.awt.*;

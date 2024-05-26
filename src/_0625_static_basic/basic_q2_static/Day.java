@@ -1,4 +1,4 @@
-package _0627_static_basic.basic_q2_static;
+package _0625_static_basic.basic_q2_static;
 
 public class Day {
     private String activity;
