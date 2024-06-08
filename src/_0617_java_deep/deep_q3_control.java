@@ -1,11 +1,11 @@
-package _0617_java_basic;
+package _0617_java_deep;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class basic_q6_control {
+public class deep_q3_control {
     public static void main(String[] args) {
         JFrame frame = new JFrame("Simple Swing Example");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
