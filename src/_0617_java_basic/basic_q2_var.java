@@ -1,5 +1,6 @@
 package _0617_java_basic;
 
+///////
 public class basic_q2_var {
     public static void main(String[] args) {
         // 개인 정보 변수 선언
