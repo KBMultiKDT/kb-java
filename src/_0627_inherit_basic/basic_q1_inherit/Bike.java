@@ -1,4 +1,4 @@
-package _0627_inherit_basic.basic_q2_inherit;
+package _0627_inherit_basic.basic_q1_inherit;
 
 public class Bike extends Vehicle {
     private boolean hasCarrier;
