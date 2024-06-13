@@ -1,4 +1,4 @@
-package _0701_casting_basic.basic_q4_casting;
+package _0700_casting_basic.basic_q4_casting;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package _0701_casting_basic;
+package _0700_casting_basic;
 
 import javax.swing.*;
 import java.awt.*;
