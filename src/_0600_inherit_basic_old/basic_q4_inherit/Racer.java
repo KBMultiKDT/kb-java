@@ -1,4 +1,4 @@
-package _0626_inherit_basic.basic_q4_inherit;
+package _0600_inherit_basic_old.basic_q4_inherit;
 
 import javax.swing.*;
 

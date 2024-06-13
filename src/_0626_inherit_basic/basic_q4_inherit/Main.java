@@ -1,28 +1,74 @@
 package _0626_inherit_basic.basic_q4_inherit;
-import javax.swing.*;
-import java.awt.*;
 
-public class Main {
-        public static void main(String[] args) {
-            JFrame frame = new JFrame("Racing Game");
+import java.util.Scanner;
 
-            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            frame.setSize(800, 800);
-            frame.setLayout(null);
+class Restaurant {
+    private int availableTables;
 
-            JPanel panel = new JPanel();
+    public Restaurant(int tables) {
+        this.availableTables = tables;
+    }
 
-            panel.setLayout(null);
-            panel.setBounds(0, 0, 800, 800);
-            panel.setBackground(Color.green);
-            frame.add(panel);
-
-            int numberOfRacers = 5;
-            int finishLine = 800; // 결승선 위치
-
-            Race race = new Race(numberOfRacers, finishLine, panel);
-            frame.setVisible(true);
-
-            race.startRace();
+    public synchronized boolean reserveTable() {
+        if (availableTables > 0) {
+            availableTables--;
+            System.out.println("Table reserved. Tables left: " + availableTables);
+            return true;
+        } else {
+            System.out.println("No tables available to reserve.");
+            return false;
         }
     }
+
+    public synchronized boolean cancelReservation() {
+        availableTables++;
+        System.out.println("Reservation cancelled. Tables available: " + availableTables);
+        return true;
+    }
+
+    public synchronized int getAvailableTables() {
+        return availableTables;
+    }
+}
+
+public class Main {
+    private static void printMenu() {
+        System.out.println("\nChoose an option:");
+        System.out.println("1. Reserve a table");
+        System.out.println("2. Cancel a reservation");
+        System.out.println("3. Show current status");
+        System.out.println("4. Exit");
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        Restaurant restaurant = new Restaurant(10); // 10 tables initially available
+
+        int choice = 0;
+        while (choice != 4) {
+            printMenu();
+            System.out.print("Enter your choice: ");
+            choice = scanner.nextInt();
+
+            switch (choice) {
+                case 1: // Reserve a table
+                    new Thread(() -> restaurant.reserveTable()).start();
+                    break;
+                case 2: // Cancel a reservation
+                    new Thread(() -> restaurant.cancelReservation()).start();
+                    break;
+                case 3: // Show current status
+                    System.out.println("Current tables available: " + restaurant.getAvailableTables());
+                    break;
+                case 4: // Exit
+                    System.out.println("Exiting system...");
+                    break;
+                default:
+                    System.out.println("Invalid option. Please try again.");
+                    break;
+            }
+        }
+
+        scanner.close();
+    }
+}
