@@ -1,4 +1,4 @@
-package _0600_inherit_basic.basic_q2_inherit._0627_inherit_basic.basic_q3_inherit;
+package _0600_inherit_basic.basic_q3_inherit;
 
 public class Counter {
     private int count = 0;
