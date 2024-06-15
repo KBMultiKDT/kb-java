@@ -1,4 +1,4 @@
-package _0700_interface_basic.basic_q1_interface._0703_interface_basic.basic_q3_interface;
+package _0700_interface_basic.basic_q3_interface;
 
 import javax.swing.*;
 import java.awt.*;

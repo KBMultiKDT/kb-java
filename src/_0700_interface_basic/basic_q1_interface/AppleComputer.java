@@ -1,4 +1,4 @@
-package _0700_interface_basic.basic_q1_interface._0703_interface_basic.basic_q1_interface;
+package _0700_interface_basic.basic_q1_interface;
 
 public class AppleComputer implements Computer {
     @Override
