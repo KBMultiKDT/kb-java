@@ -1,6 +1,0 @@
-Code: 005930
-Company Name: 삼성전자
-Open Price: 75,900
-High Price: 77,200
-
-
