@@ -3,15 +3,11 @@ class Student {
     String name;
     int grade;
     String department;
-
-    // 생성자를 사용하지 않습니다.
 }
 
 class Subject {
     String name;
     int score;
-
-    // 생성자를 사용하지 않습니다.
 }
 
 class Course {
@@ -22,7 +18,6 @@ class Course {
     Subject[] subjects;
     int subjectCount;
 
-    // 모든 초기화를 외부에서 처리하도록 생성자를 제거했습니다.
     void addStudent(Student student) {
         if (studentCount < maxStudents) {
             students[studentCount++] = student;
@@ -55,14 +50,6 @@ class Course {
         }
     }
 
-    double getAverageScore() {
-        int totalScore = 0;
-        for (int i = 0; i < subjectCount; i++) {
-            totalScore += subjects[i].score;
-        }
-        return subjectCount == 0 ? 0 : (double) totalScore / subjectCount;
-    }
-
     void printCourseInfo() {
         System.out.println("Course Name: " + courseName);
         System.out.println("Max Students: " + maxStudents);
@@ -76,8 +63,8 @@ class Course {
 public class Main {
     public static void main(String[] args) {
         Course course = new Course();
-        course.courseName = "Java Programming";
-        course.maxStudents = 30;
+        course.courseName = "Programming";
+        course.maxStudents = 5;
         course.students = new Student[course.maxStudents];
         course.subjects = new Subject[course.maxStudents];
         course.studentCount = 0;
@@ -90,12 +77,23 @@ public class Main {
         student.department = "Computer Science";
         course.addStudent(student);
 
+        Student student2 = new Student();
+        student2.id = "2022002";
+        student2.name = "Park";
+        student2.grade = 2;
+        student2.department = "Computer Science";
+        course.addStudent(student2);
+
         Subject subject = new Subject();
         subject.name = "Java";
-        subject.score = 95;
+        subject.score = 100; //만점
         course.addSubject(subject);
 
+        Subject subject2 = new Subject();
+        subject2.name = "Python";
+        subject2.score = 100; //만점
+        course.addSubject(subject2);
+
         course.printCourseInfo();
-        System.out.println("Average Score: " + course.getAverageScore());
     }
 }
