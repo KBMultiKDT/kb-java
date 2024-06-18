@@ -1,66 +1,40 @@
 package _0619_array_basic;
 
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.util.ArrayList;
+import java.util.Arrays;
 
 public class basic_q4_array {
-    private static final int TOTAL_SEATS = 200;
-    private static final int SEAT_PRICE = 10000;
-    private static ArrayList<Integer> reservedSeats = new ArrayList<>();
-    private static JButton[] seatButtons = new JButton[TOTAL_SEATS];
+        public static void main(String[] args) {
+            String[] subjects = {"국어", "영어", "수학", "컴퓨터", "회화"};
+            int[] firstSemesterGrades = {44, 66, 22, 99, 100};
+            int[] secondSemesterGrades = Arrays.copyOf(firstSemesterGrades, firstSemesterGrades.length);
 
-    public static void main(String[] args) {
-        JFrame frame = new JFrame("Seat Reservation System");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(800, 600);
-        frame.setLayout(new BorderLayout());
+            // 1학기 성적 수정
+            secondSemesterGrades[0] = 22;  // 첫 번째 과목 성적 수정
+            secondSemesterGrades[2] = 88;  // 세 번째 과목 성적 수정
 
-        JPanel seatPanel = new JPanel();
-        seatPanel.setLayout(new GridLayout(20, 10));
+            // 1. 전체 1학기, 2학기 성적 프린트
+            System.out.println("1학기 성적: " + Arrays.toString(firstSemesterGrades));
+            System.out.println("2학기 성적: " + Arrays.toString(secondSemesterGrades));
 
-        for (int i = 0; i < TOTAL_SEATS; i++) {
-            seatButtons[i] = new JButton(String.valueOf(i + 1));
-            seatButtons[i].addActionListener(new SeatButtonListener(i + 1));
-            seatPanel.add(seatButtons[i]);
-        }
-
-        JButton payButton = new JButton("결제하기");
-        payButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                StringBuilder seats = new StringBuilder("예약된 좌석 번호: ");
-                for (int seat : reservedSeats) {
-                    seats.append(seat).append(" ");
+            // 2. 1학기, 2학기 성적 중 동일한 성적 과목수
+            int sameGradesCount = 0;
+            for (int i = 0; i < firstSemesterGrades.length; i++) {
+                if (firstSemesterGrades[i] == secondSemesterGrades[i]) {
+                    sameGradesCount++;
                 }
-                int totalAmount = reservedSeats.size() * SEAT_PRICE;
-                JOptionPane.showMessageDialog(frame, seats.toString() + "\n총 결제 금액: " + totalAmount + "원");
             }
-        });
+            System.out.println("1학기와 2학기 성적이 동일한 과목 수: " + sameGradesCount);
 
-        frame.add(seatPanel, BorderLayout.CENTER);
-        frame.add(payButton, BorderLayout.SOUTH);
-        frame.setVisible(true);
-    }
-
-    private static class SeatButtonListener implements ActionListener {
-        private int seatNumber;
-
-        public SeatButtonListener(int seatNumber) {
-            this.seatNumber = seatNumber;
-        }
-
-        @Override
-        public void actionPerformed(ActionEvent e) {
-            JButton button = (JButton) e.getSource();
-            if (!reservedSeats.contains(seatNumber)) {
-                reservedSeats.add(seatNumber);
-                button.setBackground(Color.RED);
-                button.setOpaque(true);
-                button.setEnabled(false);
+            // 3. 1학기, 2학기 성적 중 오른 과목수, 과목명
+            int improvedSubjectsCount = 0;
+            StringBuilder improvedSubjects = new StringBuilder();
+            for (int i = 0; i < firstSemesterGrades.length; i++) {
+                if (secondSemesterGrades[i] > firstSemesterGrades[i]) {
+                    improvedSubjectsCount++;
+                    improvedSubjects.append(subjects[i]).append(" ");
+                }
             }
+            System.out.println("1학기보다 성적이 오른 과목 수: " + improvedSubjectsCount);
+            System.out.println("성적이 오른 과목명: " + improvedSubjects.toString().trim());
         }
     }
-}
