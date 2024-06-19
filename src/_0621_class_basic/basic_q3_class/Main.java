@@ -24,29 +24,10 @@ class Course {
         }
     }
 
-    void removeStudent(Student student) {
-        for (int i = 0; i < studentCount; i++) {
-            if (students[i] == student) { // 객체 비교를 위해 equals 대신 == 사용
-                System.arraycopy(students, i + 1, students, i, studentCount - i - 1);
-                students[--studentCount] = null;
-                break;
-            }
-        }
-    }
 
     void addSubject(Subject subject) {
         if (subjectCount < maxStudents) {
             subjects[subjectCount++] = subject;
-        }
-    }
-
-    void removeSubject(Subject subject) {
-        for (int i = 0; i < subjectCount; i++) {
-            if (subjects[i] == subject) {
-                System.arraycopy(subjects, i + 1, subjects, i, subjectCount - i - 1);
-                subjects[--subjectCount] = null;
-                break;
-            }
         }
     }
 
@@ -56,6 +37,9 @@ class Course {
         System.out.println("Current Students: " + studentCount);
         for (int i = 0; i < studentCount; i++) {
             System.out.println("Student: " + students[i].name + " - " + students[i].department);
+        }
+        for (int i = 0; i < subjectCount; i++) {
+            System.out.println("Subject: " + subjects[i].name);
         }
     }
 }
