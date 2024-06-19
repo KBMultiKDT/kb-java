@@ -1,24 +1,25 @@
 package _0620_class_basic.basic_q3_class;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        Library library = new Library();
+        Book[] books = new Book[2];
+        Scanner sc = new Scanner(System.in);
 
-        Book book1 = new Book();
-        book1.setTitle("The Great Gatsby");
-        book1.setAuthor("F. Scott Fitzgerald");
-        book1.setIsbn("9780743273565");
+        for (int i = 0; i < books.length ; i++) {
+            System.out.print("책제목, 작가, isbn을 순서대로 입력>> ");
+            books[i] = new Book();
+            books[i].setTitle(sc.next());
+            books[i].setAuthor(sc.next());
+            books[i].setIsbn(sc.next());
+        }
+        sc.close();
 
-        Book book2 = new Book();
-        book2.setTitle("1984");
-        book2.setAuthor("George Orwell");
-        book2.setIsbn("9780451524935");
-
-        library.addBook(book1);
-        library.addBook(book2);
-
-        System.out.println("------도서관 책 등록-------");
-        library.displayBooks();
+        System.out.println("------등록된 도서관 책 목록-------");
+        for (int i = 0; i < books.length; i++) {
+            books[i].displayInfo();
+        }
     }
 }
 
