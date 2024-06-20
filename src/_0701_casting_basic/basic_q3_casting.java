@@ -6,7 +6,7 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import java.io.IOException;
 
-public class basic_q4_casting {
+public class basic_q3_casting {
     public static void main(String[] args) {
         try {
             // 1. 사이트에 연결해서, HTML 문서를 다 가지고 오기

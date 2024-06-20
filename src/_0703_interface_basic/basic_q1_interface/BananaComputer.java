@@ -3,16 +3,16 @@ package _0703_interface_basic.basic_q1_interface;
 public class BananaComputer implements Computer {
     @Override
     public void start() {
-        System.out.println("Banana Computer starting.");
+        System.out.println("바나나 컴퓨터가 시작되었습니다.");
     }
 
     @Override
     public void shutdown() {
-        System.out.println("Banana Computer shutting down.");
+        System.out.println("바나나 컴퓨터는 3시간 이후에 전원이 꺼집니다.");
     }
 
     @Override
     public void restart() {
-        System.out.println("Banana Computer restarting.");
+        System.out.println("바나나 컴퓨터는 왼쪽 아래에 아이콘을 누르면 재시작합니다.");
     }
 }

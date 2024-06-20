@@ -14,18 +14,22 @@ public class ChatClient {
             byte[] receiveData = new byte[1024];
 
             // 수신 쓰레드
-            Thread receiveThread = new Thread(() -> {
-                try {
-                    while (true) {
-                        DatagramPacket receivePacket = new DatagramPacket(receiveData, receiveData.length);
-                        socket.receive(receivePacket);
-                        String message = new String(receivePacket.getData(), 0, receivePacket.getLength());
-                        System.out.println(message);
+            Thread receiveThread = new Thread(){
+                @Override
+                public void run() {
+                    try {
+                        while (true) {
+                            DatagramPacket receivePacket = new DatagramPacket(receiveData, receiveData.length);
+                            socket.receive(receivePacket);
+                            String message = new String(receivePacket.getData(), 0, receivePacket.getLength());
+                            System.out.println(message);
+                        }
+                    } catch (Exception e) {
+                        e.printStackTrace();
                     }
-                } catch (Exception e) {
-                    e.printStackTrace();
                 }
-            });
+            };
+
             receiveThread.start();
 
             // 송신 쓰레드
