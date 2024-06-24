@@ -1,10 +1,9 @@
-package _0708_lambda_basic;
+package _0708_stream_basic;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
 
- class Employee2 {
+class Employee2 {
         String name;
         String department;
         int age;
@@ -28,7 +27,7 @@ import java.util.stream.Collectors;
         }
     }
 
-    public class basic_q3_lambda {
+    public class basic_q3_stream {
         public static void main(String[] args) {
             List<Employee2> employees = Arrays.asList(
                     new Employee2("Michael", "Manager", 35),

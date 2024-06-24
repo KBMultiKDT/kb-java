@@ -3,7 +3,7 @@ package _0625_static_basic.basic_q4_static;
 import java.util.Scanner;
 
 public class BankApplication {
-        private static Account[] accounts = new Account[100];
+        private static Account[] accounts = new Account[3];
         private static int count = 0;
 
         public static void main(String[] args) {

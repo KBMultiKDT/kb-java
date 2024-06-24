@@ -1,10 +1,10 @@
-package _0708_lambda_basic;
+package _0708_stream_basic;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class basic_q1_lambda {
+public class basic_q1_stream {
 
     public static void main(String[] args) {
         //1.

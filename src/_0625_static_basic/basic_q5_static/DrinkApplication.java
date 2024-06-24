@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class DrinkApplication {
 
-        private static Drink[] drinks = new Drink[]{
+        private static Drink[] drinks = {
                 new Drink("콜라", 1200, 10),
                 new Drink("사이다", 1100, 10),
                 new Drink("커피", 900, 10)
