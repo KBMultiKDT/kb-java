@@ -1,6 +1,9 @@
-package _0701_collection_basic;
+package _0701_casting_basic;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.Map;
 
 public class basic_q1_casting {
     public static void main(String[] args) {
@@ -39,13 +42,13 @@ public class basic_q1_casting {
         System.out.println("처음 시험별 과목: " + subjects);
 
         // 각 시험 회차 후 과목 제거 및 출력
-        subjects.removeFirst(); // 첫 번째 과목 국어 제거
+        subjects.remove(); // 첫 번째 과목 국어 제거
         System.out.println("1회차 시험을 한 날은 과목: " + subjects);
 
-        subjects.removeFirst(); // 두 번째 과목 수학 제거
+        subjects.remove(); // 두 번째 과목 수학 제거
         System.out.println("2회차 시험을 한 날은 과목: " + subjects);
 
-        subjects.removeFirst(); // 세 번째 과목 영어 제거
+        subjects.remove(); // 세 번째 과목 영어 제거
         System.out.println("3회차 시험을 한 날은 과목: " + subjects);
 
 
