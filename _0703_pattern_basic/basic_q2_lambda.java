@@ -10,7 +10,7 @@ public class basic_q2_lambda {
         List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
 
         List<Integer> result = numbers.stream()  // 배열을 스트림으로 변환
-                .filter(n -> n >= 3)                  // 3보다 큰 요소만 필터링
+                .filter(n -> n > 3)                  // 3보다 큰 요소만 필터링
                 .collect(Collectors.toList());            // 리스트로 수집
 
         System.out.println(result);                   // 결과 출력
