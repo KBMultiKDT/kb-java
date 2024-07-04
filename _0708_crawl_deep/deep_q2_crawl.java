@@ -13,7 +13,7 @@ public class deep_q2_crawl {
         fileName += ".txt";
 
         try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
-            String line;
+            String line = null;
             while ((line = br.readLine()) != null) {
                 System.out.println(line);
             }
